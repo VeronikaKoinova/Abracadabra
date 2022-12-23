@@ -1,0 +1,34 @@
+﻿<Page x:Class="WPFFlowerShop.Authorization.Autorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFFlowerShop.Authorization"
+      mc:Ignorable="d" 
+      d:DesignHeight="200" d:DesignWidth="400"
+      Title="Autorization">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="187*"/>
+            <RowDefinition Height="13*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="#E0D5BE" Style="{StaticResource StackPanelMainStyle}" Orientation="Vertical" Margin="0,45,0,0" VerticalAlignment="Top">
+            <StackPanel Style="{StaticResource StackPanelMainStyle}">
+                <TextBlock Name="TextBlockAutorizationLogin" Text="Логин:" Style="{StaticResource TextBlockMainStyle}" Width="70.64"/>
+                <TextBox Name="log" Style="{StaticResource TextBoxMainStyle}" Width="290"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPanelMainStyle}" Width="370">
+                <TextBlock x:Name="TextBlockAutorizationPassword" Text="Пароль:" Style="{StaticResource TextBlockMainStyle}"/>
+                <PasswordBox x:Name="pass" Style="{StaticResource PasswordBoxMainStyle}" Width="290" Margin="2,2,2,2"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPanelMainStyle}">
+                <Button Name="ButtonEnter" Content="Войти" Style="{StaticResource ButtonMainStyle}" Click="ButtonEnter_Click"/>
+               
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
